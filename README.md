@@ -65,6 +65,92 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git branch
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
 ```
 
+### Exercise 2
+```bash
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<h1>Hello, World</h1>" > home.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add .
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash
+Saved working directory and index state WIP on main: ba6b00a Add Solution to Exercise 1
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<p>I am a trainee at the Gym</p>" > about.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add .
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash
+Saved working directory and index state WIP on main: ba6b00a Add Solution to Exercise 1
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<h2>Our Team</h2>" > team.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add . && git stash
+Saved working directory and index state WIP on main: ba6b00a Add Solution to Exercise 1
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ ls
+README.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: ba6b00a Add Solution to Exercise 1
+stash@{1}: WIP on main: ba6b00a Add Solution to Exercise 1
+stash@{2}: WIP on main: ba6b00a Add Solution to Exercise 1
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash pop 1
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped refs/stash@{1} (856d2482b2bb9a4c9dfd2269ad0dfb9c802aa532)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ ls
+README.md  about.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: ba6b00a Add Solution to Exercise 1
+stash@{1}: WIP on main: ba6b00a Add Solution to Exercise 1
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash pop 1
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped refs/stash@{1} (eecd2301dfb1a368665c91fd6a115d277c2ee1d3)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git commit -m "Add home and about pages" && git push
+[main 4904368] Add home and about pages
+ 2 files changed, 2 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 381 bytes | 42.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+   ba6b00a..4904368  main -> main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: 4904368 Add home and about pages
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped refs/stash@{0} (186fcc69be3695ca7ac6af456b548aedd1912f35)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git reset --hard
+HEAD is now at 4904368 Add home and about pages
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
+```
 
 
 
