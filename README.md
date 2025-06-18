@@ -306,6 +306,126 @@ To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
 ```
 
+<br /><hr /><br />
+
+## Bundle 3
+### Exercise 1
+```bash
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<h1>Our Team</h1>" > team.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add . && git commit -m "Add Team Section"
+[ft/team-page 78d7b16] Add Team Section
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git push origin -u ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 98.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/elyse502/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git branch ft/contact-page
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git log -1
+commit 78d7b16b0cb391960de82e56077360a8a704e8fb (HEAD -> ft/team-page, origin/ft/team-page)
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Wed Jun 18 11:02:07 2025 +0300
+
+    Add Team Section
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git cherry-pick 78d7b16b0cb391960de82e56077360a8a704e8fb
+[ft/contact-page 253508f] Add Team Section
+ Date: Wed Jun 18 11:02:07 2025 +0300
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<h1>Our Contacts</h1>" > contact.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add . && git commit -m "Add new changes" && git push origin -u ft/contact-page
+[ft/contact-page a65e498] Add new changes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contact.html
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 544 bytes | 108.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/elyse502/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ echo "<h1>FAQ</h1>" > faq.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git add . && git commit -m "Create faq page" && git pus
+h origin -u ft/faq-page
+[ft/faq-page e0efb60] Create faq page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 faq.html
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 55.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/elyse502/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git revert 78d7b16b0cb391960de82e56077360a8a704e8fb
+[ft/faq-page c3c5dbe] Revert "Add Team Section"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 team.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git status
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 276 bytes | 92.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+   e0efb60..c3c5dbe  ft/faq-page -> ft/faq-page
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
+```
+
+
+
 
 
 
