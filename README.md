@@ -488,6 +488,85 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/Gym-Git-Exercise-Solutions$
 ```
 
+<br /><hr /><br />
+
+## Bundle 4
+### Exercise 1
+```bash
+elysee@DESKTOP-73EL1TL:~$ cd the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git fetch; git pull
+Already up to date.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git remote add git-copy https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git remote -v
+git-copy        https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git (fetch)
+git-copy        https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git (push)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ ls
+README.md  about.html  contact.html  faq.html  home.html  services.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ vi home.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git add .; git commit -m "Updated home page"
+[main 53f3441] Updated home page
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 162.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+   75bd185..53f3441  main -> main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git push git-copy main
+Username for 'https://github.com': elyse502
+Password for 'https://elyse502@github.com':
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git push --force git-copy main
+Username for 'https://github.com': elyse502
+Password for 'https://elyse502@github.com':
+Enumerating objects: 65, done.
+Counting objects: 100% (65/65), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (55/55), done.
+Writing objects: 100% (65/65), 13.89 KiB | 677.00 KiB/s, done.
+Total 65 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions-copy.git
+ + 72d3960...53f3441 main -> main (forced update)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ ls
+README.md  about.html  contact.html  faq.html  home.html  services.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$
+```
 
 
 
