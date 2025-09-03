@@ -568,6 +568,90 @@ README.md  about.html  contact.html  faq.html  home.html  services.html
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$
 ```
 
+### Exercise 2
+```bash
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ ls
+README.md  about.html  contact.html  faq.html  home.html  services.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ vi services.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git add .; git commit -m "Add new changes"
+[ft/footer 1d1b464] Add new changes
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ vi services.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git add .; git commit -m "Add second chang
+e"
+[ft/footer 6fd0e47] Add second change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git push origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 628 bytes | 314.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/elyse502/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git merge --squash ft/footer
+Updating 956b83a..6fd0e47
+Fast-forward
+Squash commit -- not updating HEAD
+ services.html | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git commit -m "service page changes squashing"
+[ft/squashing bd8b638] service page changes squashing
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$ git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 195.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/elyse502/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/elyse502/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/2-sprint/git/Gym-Git-Exercise-Solutions$
+```
 
 
 
